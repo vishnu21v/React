@@ -29,5 +29,5 @@ The integration between GitHub and Vercel ensures a continuous deployment workfl
 🧾 Author
 
 Vishnu V
-📍 Master’s in Artificial Intelligence – RMIT University
+📍 Master’s in Artificial Intelligence – RMIT University <br>
 💻 Repository: https://github.com/vishnu21v/React
