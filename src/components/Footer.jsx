@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Vishnu. Built with React.</p>
+      <p>© {new Date().getFullYear()} Vishnu Vaitheeswaran. Built with React.</p>
     </footer>
   );
 };

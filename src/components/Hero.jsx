@@ -5,7 +5,7 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="hero-content">
         <p className="tag">Hi, I'm Vishnu Vaitheeswaran👋</p>
-        <h1>Frontend & AI Developer Portfolio</h1>
+        <h1>Frontend & AI Developer </h1>
         <p className="subtitle">
           I build web apps, data/ML mini projects, and clean UI components.
         </p>

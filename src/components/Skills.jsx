@@ -9,6 +9,8 @@ const skills = [
   "Git / GitHub",
   "HTML & CSS",
   "Data Cleaning",
+  "NLP fundamentals",
+  "Data mining",
 ];
 
 const Skills = () => {
