@@ -78,12 +78,12 @@ const Contact = () => {
 
       {status === "success" && (
         <p style={{ color: "green", marginTop: "1rem" }}>
-          ✅ Message sent! I'll get back to you.
+          Message sent! I'll get back to you.
         </p>
       )}
       {status === "error" && (
         <p style={{ color: "red", marginTop: "1rem" }}>
-          ❌ Something went wrong. Try again later.
+          Something went wrong. Try again later.
         </p>
       )}
 
