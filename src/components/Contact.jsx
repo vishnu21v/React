@@ -43,6 +43,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section">
+      <div className="container">
+
       <h2 className="section-title">Contact</h2>
       <p>Want to collaborate? Drop a message.</p>
 
@@ -93,6 +95,7 @@ const Contact = () => {
           vishnuvaitheeswaran2002@gmail.com
         </a>
       </p>
+      </div>
     </section>
   );
 };

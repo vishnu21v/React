@@ -24,7 +24,8 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="section">
-      <h2 className="section-title">Projects</h2>
+      <div className="container">
+        <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
         {projects.map((p) => (
           <article key={p.title} className="project-card">
@@ -41,6 +42,8 @@ const Projects = () => {
           </article>
         ))}
       </div>
+      </div>
+      
     </section>
   );
 };

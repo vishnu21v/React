@@ -23,7 +23,10 @@ body {
 .app {
   min-height: 100vh;
 }
-
+.container{
+  padding:15rem;
+  
+}
 .nav {
   position: sticky;
   top: 0;

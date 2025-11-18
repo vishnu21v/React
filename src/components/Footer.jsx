@@ -3,7 +3,10 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Vishnu Vaitheeswaran. Built with React.</p>
+      <div className="container">
+              <p>© {new Date().getFullYear()} Vishnu Vaitheeswaran. Built with React.</p>
+      </div>
+
     </footer>
   );
 };

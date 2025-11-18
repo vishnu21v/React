@@ -3,7 +3,8 @@ import React from "react";
 const Hero = () => {
   return (
     <section id="home" className="hero">
-      <div className="hero-content">
+      <div className="container">
+        <div className="hero-content">
         <p className="tag">Hi, I'm Vishnu Vaitheeswaran👋</p>
         <h1>Frontend & AI Developer </h1>
         <p className="subtitle">
@@ -22,6 +23,8 @@ const Hero = () => {
         {/* replace with your image */}
         <div className="hero-avatar">V</div>
       </div>
+      </div>
+
     </section>
   );
 };
