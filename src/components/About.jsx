@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="section">
+    <section id="about" className="section">
       <div className="container">
           <h2 className="section-title">About</h2>
         <p>
@@ -16,7 +16,7 @@ const About = () => {
           apps.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
