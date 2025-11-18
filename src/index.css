@@ -92,6 +92,7 @@ body {
 .hero-content h1 {
   font-size: clamp(2.5rem, 5vw, 3.2rem);
   margin-bottom: 1rem;
+  width:70%
 }
 
 .tag {
@@ -140,6 +141,7 @@ body {
 .hero-photo {
   display: flex;
   justify-content: center;
+  width:30%;
 }
 
 .hero-avatar {
