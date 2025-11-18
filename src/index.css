@@ -24,8 +24,8 @@ body {
   min-height: 100vh;
 }
 .container{
-  padding:15rem;
-  
+  padding:3%;
+
 }
 .nav {
   position: sticky;
