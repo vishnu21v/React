@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <section id="about" className="section">
-      <div className="container">
+      <div className="container About">
           <h2 className="section-title">About</h2>
         <p>
           I'm an AI / Data / Web enthusiast currently studying and building

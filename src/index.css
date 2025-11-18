@@ -87,6 +87,10 @@ body {
   align-items: center;
   width: 100%;
 }
+.About .Contact .Footer .Hero .Projects .Skills{
+  display: flex;
+  flex-direction: row ;
+}
 .hero-content{
   width:70%;
   margin-left:5%;
