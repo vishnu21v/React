@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section id="home" className="hero section">
-      <div className="container Hero">
+      <div className="Hero">
         <div className="hero-content">
         <p className="tag">Hi, I'm Vishnu Vaitheeswaran👋</p>
         <h1>Frontend & AI Developer </h1>
