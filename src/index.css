@@ -97,10 +97,7 @@ body {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-section{
-  margin-left:5%;
-  margin-right: 5%;
-}
+
 .hero-content{
   width:70%;
 }
@@ -171,8 +168,9 @@ section{
 }
 
 .section {
-  margin: 0 auto;
   padding: 4rem 1rem 3rem;
+  margin-left:5%;
+  margin-right: 5%;
 }
 
 .section-title {
