@@ -96,12 +96,13 @@ body {
   width: 100%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+section{
   margin-left:5%;
   margin-right: 5%;
 }
 .hero-content{
   width:70%;
-  margin-left:5%;
 }
 .hero-content h1 {
   font-size: clamp(2.5rem, 5vw, 3.2rem);
