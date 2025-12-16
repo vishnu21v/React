@@ -277,52 +277,48 @@ body {
   }
 }
 
-/* Skills section */
+/* Skills section *//* Skills section */
 .sec.edu {
   padding: 4rem 0;
 }
 
 .container.skills {
   width: 100%;
-  margin: 0 auto;
+  overflow: hidden;
 }
 
+/* Scroller */
 .scroller {
   width: 100%;
   overflow: hidden;
 }
 
-
-.scroller[data-animated="true"] {
-  -webkit-mask-image: none;
-  mask-image: none;
-}
-
-
+/* Content */
 .scroller_content {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 6rem;
-  text-align: center;
-  padding-block: 1rem;
   width: max-content;
   animation: scroll 20s linear infinite;
   list-style: none;
+  padding: 0;
   margin: 0;
-  padding-left: 0;
 }
 
+/* Items */
 .scroller_content li {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-right: 6rem;   /* spacing between items */
 }
 
-.fa-brands {
+/* Icon */
+.scroller_content svg {
   font-size: 70px;
+  margin-bottom: 0.75rem; /* gap between icon & text */
 }
 
+/* Animation */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -331,5 +327,3 @@ body {
     transform: translateX(-50%);
   }
 }
-
-
