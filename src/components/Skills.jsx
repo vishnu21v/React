@@ -36,9 +36,9 @@ const Skills = () => {
   ];
 
   return (
-    <section className="sec edu" id="skills">
+    <section className="section" id="skills">
       <div className="Projects">
-        <h2 className="section-title">Projects</h2>
+        <h2 className="section-title">Skills</h2>
       </div>
       <div className="container skills">
         <div className="scroller" data-animated="true">
