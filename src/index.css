@@ -386,3 +386,24 @@ body {
     transform: translateY(0);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.reveal.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
