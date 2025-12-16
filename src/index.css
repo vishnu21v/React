@@ -168,7 +168,7 @@ body {
 }
 
 .section {
-  padding: 4rem 1rem 3rem;
+  padding: 4rem 1rem 1rem;
   margin-left:5%;
   margin-right: 5%;
 }
@@ -366,4 +366,23 @@ body {
 }
 .scroller:hover .scroller_content {
   animation-play-state: paused;
+}
+
+
+
+
+
+
+.delayed {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: showUp 0.8s ease forwards;
+  animation-delay: 3s;   /* CHANGE DELAY HERE */
+}
+
+@keyframes showUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
