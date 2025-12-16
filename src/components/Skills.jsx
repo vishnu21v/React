@@ -1,54 +1,47 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faFlickr,
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faPython,
+  faJava,
+  faFigma,
+  faGitAlt,
+} from "@fortawesome/free-brands-svg-icons";
 
 
 const Skills = () => {
+  const skills = [
+    { name: "Github", icon: faGithub },
+    { name: "Flickr", icon: faFlickr },
+    { name: "HTML", icon: faHtml5 },
+    { name: "CSS", icon: faCss3Alt },
+    { name: "JS", icon: faJs },
+    { name: "Python", icon: faPython },
+    { name: "Java", icon: faJava },
+    { name: "Figma", icon: faFigma },
+    { name: "Git", icon: faGitAlt },
+    // duplicate for scroll
+    { name: "Github", icon: faGithub },
+  ];
+
   return (
     <section className="sec edu" id="skills">
+      <h2 className="section-title">Skills</h2>
       <div className="container skills">
         <div className="scroller" data-animated="true">
           <ul className="scroller_content">
-            <li>
-              <div><i className="fa-brands fa-github"></i></div>
-              Github
-            </li>
-            <li>
-              <div><i className="fa-brands fa-flickr"></i></div>
-              Flickr
-            </li>
-            <li>
-              <div><i className="fa-brands fa-html5"></i></div>
-              HTML
-            </li>
-            <li>
-              <div><i className="fa-brands fa-css3-alt"></i></div>
-              CSS
-            </li>
-            <li>
-              <div><i className="fa-brands fa-js"></i></div>
-              JS
-            </li>
-            <li>
-              <div><i className="fa-brands fa-python"></i></div>
-              Python
-            </li>
-            <li>
-              <div><i className="fa-brands fa-java"></i></div>
-              Java
-            </li>
-            <li>
-              <div><i className="fa-brands fa-figma"></i></div>
-              Figma
-            </li>
-            <li>
-              <div><i className="fa-brands fa-git-alt"></i></div>
-              Git
-            </li>
-
-            {/* duplicate for infinite scroll */}
-            <li>
-              <div><i className="fa-brands fa-github"></i></div>
-              Github
-            </li>
+            {skills.map((skill, index) => (
+              <li key={index}>
+                <div>
+                  <FontAwesomeIcon icon={skill.icon} size="4x" />
+                </div>
+                {skill.name}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
