@@ -289,25 +289,15 @@ body {
 
 .scroller {
   width: 100%;
+  overflow: hidden;
 }
 
+
 .scroller[data-animated="true"] {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(
-    100deg,
-    transparent,
-    rgba(196, 151, 3, 0.918) 20%,
-    rgba(196, 151, 3, 0.918) 80%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    100deg,
-    transparent,
-    rgba(196, 151, 3, 0.918) 20%,
-    rgba(196, 151, 3, 0.918) 80%,
-    transparent
-  );
+  -webkit-mask-image: none;
+  mask-image: none;
 }
+
 
 .scroller_content {
   display: flex;
@@ -334,6 +324,9 @@ body {
 }
 
 @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
   to {
     transform: translateX(-50%);
   }

@@ -12,28 +12,7 @@ import {
   faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Skills = () => {
-  const skills = [
-    { name: "Github", icon: faGithub },
-    { name: "Flickr", icon: faFlickr },
-    { name: "HTML", icon: faHtml5 },
-    { name: "CSS", icon: faCss3Alt },
-    { name: "JS", icon: faJs },
-    { name: "Python", icon: faPython },
-    { name: "Java", icon: faJava },
-    { name: "Figma", icon: faFigma },
-    { name: "Git", icon: faGitAlt },
-    { name: "Github", icon: faGithub }, // duplicate for scroll
-    { name: "Flickr", icon: faFlickr },
-    { name: "HTML", icon: faHtml5 },
-    { name: "CSS", icon: faCss3Alt },
-    { name: "JS", icon: faJs },
-    { name: "Python", icon: faPython },
-    { name: "Java", icon: faJava },
-    { name: "Figma", icon: faFigma },
-    { name: "Git", icon: faGitAlt },
-    { name: "Github", icon: faGithub }, 
-  ];
+
 
   return (
     <section className="section" id="skills">
@@ -43,13 +22,10 @@ const Skills = () => {
       <div className="container skills">
         <div className="scroller" data-animated="true">
           <ul className="scroller_content">
-            {skills.map((skill, index) => (
+            {[...skills, ...skills].map((skill, index) => (
               <li key={index}>
-                <div>
-                  <FontAwesomeIcon icon={skill.icon} size="4x" />
-                </div>
-                <br /> &nbsp;
-                {skill.name}
+                <FontAwesomeIcon icon={skill.icon} />
+                <span>{skill.name}</span>
               </li>
             ))}
           </ul>
@@ -57,6 +33,6 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+
 
 export default Skills;
