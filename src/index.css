@@ -276,3 +276,140 @@ body {
     display: block;
   }
 }
+
+/*scroller */
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.sec {
+  padding: 4rem 0;
+}
+
+.container.skills {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* =========================
+   SCROLLER WRAPPER
+========================= */
+
+.scroller {
+  width: 100%;
+  position: relative;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+
+  -webkit-mask: linear-gradient(
+    100deg,
+    transparent,
+    rgba(196, 151, 3, 0.918) 20%,
+    rgba(196, 151, 3, 0.918) 80%,
+    transparent
+  );
+
+  mask: linear-gradient(
+    100deg,
+    transparent,
+    rgba(196, 151, 3, 0.918) 20%,
+    rgba(196, 151, 3, 0.918) 80%,
+    transparent
+  );
+}
+
+/* =========================
+   SCROLLER CONTENT
+========================= */
+
+.scroller_content {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  gap: 6rem;
+  padding-block: 1.5rem;
+  list-style: none;
+
+  animation: scroll 20s linear infinite;
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   SKILL ITEM
+========================= */
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 120px;
+}
+
+.skill-item span {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* =========================
+   ICON STYLES
+========================= */
+
+.fa-brands {
+  font-size: 70px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   HOVER EFFECT (OPTIONAL)
+========================= */
+
+.skill-item:hover .fa-brands {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .fa-brands {
+    font-size: 50px;
+  }
+
+  .scroller_content {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fa-brands {
+    font-size: 40px;
+  }
+
+  .scroller_content {
+    gap: 3rem;
+  }
+}
