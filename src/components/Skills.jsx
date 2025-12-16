@@ -48,7 +48,7 @@ const Skills = () => {
                 <div>
                   <FontAwesomeIcon icon={skill.icon} size="4x" />
                 </div>
-                <br/>
+                <br /> &nbsp;
                 {skill.name}
               </li>
             ))}
