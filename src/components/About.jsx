@@ -6,12 +6,11 @@ const About = () => {
     const elements = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add("active");
-            }, 3000); // 3 seconds delay
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // reveal only once
           }
         });
       },
