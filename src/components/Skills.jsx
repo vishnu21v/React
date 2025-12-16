@@ -12,7 +12,6 @@ import {
   faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
 
-
 const Skills = () => {
   const skills = [
     { name: "Github", icon: faGithub },
@@ -24,13 +23,11 @@ const Skills = () => {
     { name: "Java", icon: faJava },
     { name: "Figma", icon: faFigma },
     { name: "Git", icon: faGitAlt },
-    // duplicate for scroll
-    { name: "Github", icon: faGithub },
+    { name: "Github", icon: faGithub }, // duplicate for scroll
   ];
 
   return (
     <section className="sec edu" id="skills">
-      <h2 className="section-title">Skills</h2>
       <div className="container skills">
         <div className="scroller" data-animated="true">
           <ul className="scroller_content">
