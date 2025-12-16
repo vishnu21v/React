@@ -24,6 +24,14 @@ const Skills = () => {
     { name: "Figma", icon: faFigma },
     { name: "Git", icon: faGitAlt },
     { name: "Github", icon: faGithub }, // duplicate for scroll
+    { name: "Flickr", icon: faFlickr },
+    { name: "HTML", icon: faHtml5 },
+    { name: "CSS", icon: faCss3Alt },
+    { name: "JS", icon: faJs },
+    { name: "Python", icon: faPython },
+    { name: "Java", icon: faJava },
+    { name: "Figma", icon: faFigma },
+    { name: "Git", icon: faGitAlt },
   ];
 
   return (
