@@ -292,45 +292,97 @@ body {
     margin-bottom: 1%;
     
   }
-/*scroller*/
-.scroller_content{
-          padding-block: 1rem;
-          display:flex;
-          flex-wrap:wrap ;
-          gap:10rem;
-          text-align:center ; 
-        }
-        .scroller[data-animated="true"]{
-          overflow:hidden ;
-          -webkit-mask :linear-gradient(100deg ,transparent,rgba(196, 151, 3, 0.918) 20%,rgba(196, 151, 3, 0.918) 80%,transparent);
-          mask: linear-gradient(100deg ,transparent,rgba(196, 151, 3, 0.918) 20%,rgba(196, 151, 3, 0.918) 80%,transparent);
-        }
-        .scroller[data-animated="true"] .scroller_content{
-          width: max-content;
-          flex-wrap: nowrap;
-          animation: scroll 20s linear infinite;
-          scroll-behavior:smooth;
-        } 
-        @keyframes scroll{
-          to{
-            transform : translate(-50%);
-          }
-        }
-        li{
-          display:inline; 
-        }
-        .l{
-          text-align:center ;
-        }
-/* in scroll */
-        .fa-brands{
-          font-size: 70px;
-        }
-        .ph1{
-          padding:2%;
-        }
-        .ph{
-          color:invert;
-        }
-/*end scoller     */ 
+/* =====================
+   SECTION
+===================== */
+
+.sec {
+  padding: 4rem 0;
+}
+
+.edu {
+  width: 100%;
+}
+
+.container.skills {
+  width: 100%;
+}
+
+/* =====================
+   SCROLLER
+===================== */
+
+.scroller {
+  width: 100%;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+
+  -webkit-mask-image: linear-gradient(
+    100deg,
+    transparent,
+    rgba(196, 151, 3, 0.918) 20%,
+    rgba(196, 151, 3, 0.918) 80%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    100deg,
+    transparent,
+    rgba(196, 151, 3, 0.918) 20%,
+    rgba(196, 151, 3, 0.918) 80%,
+    transparent
+  );
+}
+
+/* =====================
+   SCROLLER CONTENT
+===================== */
+
+.scroller_content {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10rem;
+  text-align: center;
+
+  width: max-content;
+  animation: scroll 20s linear infinite;
+  scroll-behavior: smooth;
+
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* =====================
+   LIST ITEMS
+===================== */
+
+.scroller_content li {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================
+   ICONS
+===================== */
+
+.fa-brands {
+  font-size: 70px;
+}
+
+/* =====================
+   ANIMATION
+===================== */
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 
