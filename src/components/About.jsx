@@ -17,7 +17,11 @@ const About = () => {
       { threshold: 0.2 }
     );
 
-    elements.forEach(el => observer.observe(el));
+        elements.forEach((el, index) => {
+      observer.observe(el);
+      // Optional: stagger using CSS delay
+      el.style.transitionDelay = `${index * 0.5 + 3}s`; // 3s base + 0.5s per item
+    });
 
     return () => observer.disconnect();
   }, []);
