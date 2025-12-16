@@ -39,6 +39,26 @@ const Contact = () => {
     } finally {
       setLoading(false);
     }
+      useEffect(() => {
+        const elements = document.querySelectorAll(".reveal");
+    
+        const observer = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setTimeout(() => {
+                  entry.target.classList.add("active");
+                }, 3000); // 3 seconds delay
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+    
+        elements.forEach(el => observer.observe(el));
+    
+        return () => observer.disconnect();
+      }, []);
   };
 
   return (
