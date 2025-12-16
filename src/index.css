@@ -371,38 +371,14 @@ body {
 
 
 
-
-
-.delayed {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: showUp 0.8s ease forwards;
-  animation-delay: 3s;   /* CHANGE DELAY HERE */
-}
-
-@keyframes showUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Reveal items safe animation */
+/* ------------------ */
+/* Reveal Items */
+/* ------------------ */
 .reveal-item {
-  opacity: 0.2; /* partially visible instead of hidden */
+  opacity: 0.2;               /* partially visible */
   transform: translateY(20px);
   transition: all 0.8s ease;
+  transition-delay: 3s;       /* 3 seconds delay */
 }
 
 .reveal-item.active {
@@ -410,7 +386,9 @@ body {
   transform: translateY(0);
 }
 
-/* Section styling */
+/* ------------------ */
+/* Section Styling */
+/* ------------------ */
 .section {
   padding: 4rem 0;
 }
