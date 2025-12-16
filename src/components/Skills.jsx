@@ -32,10 +32,14 @@ const Skills = () => {
     { name: "Java", icon: faJava },
     { name: "Figma", icon: faFigma },
     { name: "Git", icon: faGitAlt },
+    { name: "Github", icon: faGithub }, 
   ];
 
   return (
     <section className="sec edu" id="skills">
+      <div className="Projects">
+        <h2 className="section-title">Projects</h2>
+      </div>
       <div className="container skills">
         <div className="scroller" data-animated="true">
           <ul className="scroller_content">
