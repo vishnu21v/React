@@ -327,3 +327,43 @@ body {
     transform: translateX(-50%);
   }
 }
+.scroller {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Left shadow */
+.scroller::before,
+.scroller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Left fade */
+.scroller::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  );
+}
+
+/* Right fade */
+.scroller::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  );
+}
+.scroller:hover .scroller_content {
+  animation-play-state: paused;
+}
