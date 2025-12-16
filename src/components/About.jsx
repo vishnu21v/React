@@ -26,7 +26,6 @@ const useReveal = () => {
 
 const revealRef = useReveal();
 
-<section ref={revealRef} className="section reveal"></section>
 
 const About = () => {
   return (
