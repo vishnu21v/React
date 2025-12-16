@@ -1,35 +1,8 @@
 import React from "react";
 
-
-
-import { useEffect, useRef } from "react";
-
-const useReveal = () => {
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  return ref;
-};
-
-const revealRef = useReveal();
-
-
 const About = () => {
   return (
-    <section id="about" className="section revel" ref={revealRef} >
+    <section id="about" className="section">
       <div className=" About">
           <h2 className="section-title">About</h2>
         <p>
