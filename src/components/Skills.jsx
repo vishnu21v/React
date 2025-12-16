@@ -1,32 +1,70 @@
 import React from "react";
-
-const skills = [
-  "React",
-  "JavaScript",
-  "Python",
-  "Flask",
-  "Machine Learning basics",
-  "Git / GitHub",
-  "HTML & CSS",
-  "Data Cleaning",
-  "NLP fundamentals",
-  "Data mining",
-];
+import "./Skills.css";
 
 const Skills = () => {
   return (
-    <section id="skills" className="section">
-      <div className="Skills">
-        <h2 className="section-title">Skills</h2>
-      <div className="skills-grid">
-        {skills.map((s) => (
-          <div key={s} className="skill-pill">
-            {s}
-          </div>
-        ))}
+    <section className="sec edu" id="skills">
+      <div className="container skills">
+        <div className="scroller" data-animated="true">
+          <ul className="scroller_content">
+            <li>
+              <div><i className="fa-brands fa-github"></i></div>
+              Github
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-flickr"></i></div>
+              Flickr
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-html5"></i></div>
+              HTML
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-css3-alt"></i></div>
+              CSS
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-js"></i></div>
+              JS
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-python"></i></div>
+              Python
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-java"></i></div>
+              Java
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-figma"></i></div>
+              Figma
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-git-alt"></i></div>
+              Git
+            </li>
+
+            {/* duplicate items for infinite scroll */}
+            <li>
+              <div><i className="fa-brands fa-github"></i></div>
+              Github
+            </li>
+
+            <li>
+              <div><i className="fa-brands fa-css3-alt"></i></div>
+              CSS
+            </li>
+          </ul>
+        </div>
       </div>
-      </div>
-      
     </section>
   );
 };

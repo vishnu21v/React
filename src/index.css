@@ -277,3 +277,60 @@ body {
   }
 }
 
+.skills{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  .scroller{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding:1%;
+    margin-bottom: 1%;
+    
+  }
+/*scroller*/
+.scroller_content{
+          padding-block: 1rem;
+          display:flex;
+          flex-wrap:wrap ;
+          gap:10rem;
+          text-align:center ; 
+        }
+        .scroller[data-animated="true"]{
+          overflow:hidden ;
+          -webkit-mask :linear-gradient(100deg ,transparent,rgba(196, 151, 3, 0.918) 20%,rgba(196, 151, 3, 0.918) 80%,transparent);
+          mask: linear-gradient(100deg ,transparent,rgba(196, 151, 3, 0.918) 20%,rgba(196, 151, 3, 0.918) 80%,transparent);
+        }
+        .scroller[data-animated="true"] .scroller_content{
+          width: max-content;
+          flex-wrap: nowrap;
+          animation: scroll 20s linear infinite;
+          scroll-behavior:smooth;
+        } 
+        @keyframes scroll{
+          to{
+            transform : translate(-50%);
+          }
+        }
+        li{
+          display:inline; 
+        }
+        .l{
+          text-align:center ;
+        }
+/* in scroll */
+        .fa-brands{
+          font-size: 70px;
+        }
+        .ph1{
+          padding:2%;
+        }
+        .ph{
+          color:invert;
+        }
+/*end scoller     */ 
+
