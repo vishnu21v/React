@@ -27,9 +27,9 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="section reveal">
+    <section id="about" className="section ">
       <div className="About">
-        <h2 className="section-title">About</h2>
+        <h2 className="section-title reveal">About</h2>
         <p>
           I'm an AI / Data / Web enthusiast currently studying and building
           projects in React, Python, ML, and academic assignments (classification,
