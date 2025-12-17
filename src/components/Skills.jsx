@@ -27,7 +27,7 @@ const Skills = () => {
   ];
   useScrollReveal();
   return (
-    <section className="section" id="skills">
+    <section className="section reveal" id="skills">
       <h2 className="section-title">Skills</h2>
 
       <div className="container skills">

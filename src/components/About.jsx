@@ -4,7 +4,7 @@ import useScrollReveal from "../hooks/useScrollReveal";
 const About = () => {
   useScrollReveal();
   return (
-    <section id="about" className="section reveal-item">
+    <section id="about" className="section reveal">
       <div className="About">
         <h2 className="section-title">About</h2>
         <p>
