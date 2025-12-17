@@ -2,26 +2,6 @@ import React from "react";
 
 const About = () => {
 
-  useEffect(() => {
-    const elements = document.querySelectorAll(".reveal-item");
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-            observer.unobserve(entry.target); // reveal once
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
 
   return (
     <section id="about" className="section reveal-item">
