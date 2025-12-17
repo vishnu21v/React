@@ -6,9 +6,10 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+import useViewportVisibility from "./hooks/useViewportVisibility";
 
 function App() {
+  useViewportVisibility();
   return (
     <div className="app">
       <Navbar />
