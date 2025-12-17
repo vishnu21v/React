@@ -1,66 +1,6 @@
 import React, { useState } from "react";
 
 const Contact = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [status, setStatus] = useState(""); // "success" | "error" | ""
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("");
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      const data = await res.json();
-
-      if (res.ok && data.ok) {
-        setStatus("success");
-        setForm({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-    } finally {
-      setLoading(false);
-    }
-      useEffect(() => {
-        const elements = document.querySelectorAll(".reveal");
-    
-        const observer = new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                setTimeout(() => {
-                  entry.target.classList.add("active");
-                }, 3000); // 3 seconds delay
-              }
-            });
-          },
-          { threshold: 0.2 }
-        );
-    
-        elements.forEach(el => observer.observe(el));
-    
-        return () => observer.disconnect();
-      }, []);
-  };
-
   return (
     <section id="contact" className="section">
       <div className=" Contact">

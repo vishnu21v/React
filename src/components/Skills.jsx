@@ -24,26 +24,7 @@ const Skills = () => {
     { name: "Figma", icon: faFigma },
     { name: "Git", icon: faGitAlt },
   ];
-    useEffect(() => {
-      const elements = document.querySelectorAll(".reveal");
-  
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              setTimeout(() => {
-                entry.target.classList.add("active");
-              }, 3000); // 3 seconds delay
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-  
-      elements.forEach(el => observer.observe(el));
-  
-      return () => observer.disconnect();
-    }, []);
+
   return (
     <section className="section" id="skills">
       <h2 className="section-title">Skills</h2>

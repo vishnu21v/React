@@ -1,26 +1,6 @@
 import React from "react";
 
 const Hero = () => {
-    useEffect(() => {
-      const elements = document.querySelectorAll(".reveal");
-  
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              setTimeout(() => {
-                entry.target.classList.add("active");
-              }, 3000); // 3 seconds delay
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-  
-      elements.forEach(el => observer.observe(el));
-  
-      return () => observer.disconnect();
-    }, []);
   return (
     <section id="home" className="hero section">
       <div className="Hero">
