@@ -1,8 +1,8 @@
 import React from "react";
 
-const Contact = () => {
+const Contact = ({ className }) => {
   return (
-    <section id="contact" className="section">
+    <section id="contact" className={`${className}`}>
       <div className="Contact">
         <h2 className="section-title">Contact</h2>
         <p>Feel free to reach out through any of the platforms below.</p>

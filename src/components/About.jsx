@@ -1,10 +1,10 @@
 import React from "react";
 import useScrollReveal from "../hooks/useScrollReveal";
 
-const About = () => {
+const About = ({ className }) => {
   useScrollReveal();
   return (
-    <section id="about" className="section reveal">
+    <section id="about" className={`${className} reveal`}>
       <div className="About">
         <h2 className="section-title">About</h2>
         <p>

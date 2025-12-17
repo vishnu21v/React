@@ -1,8 +1,8 @@
 import React from "react";
 
-const Hero = () => {
+const Hero = ({ className }) => {
   return (
-    <section id="home" className="hero section">
+    <section id="home" className={`${className} hero`}>
       <div className="Hero">
         <div className="hero-content">
         <p className="tag">Hi, I'm Vishnu Vaitheeswaran👋</p>

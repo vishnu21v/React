@@ -13,7 +13,7 @@ import {
   faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Skills = () => {
+const Skills = ({ className }) => {
   const skills = [
     { name: "Github", icon: faGithub },
     { name: "Flickr", icon: faFlickr },
@@ -27,7 +27,7 @@ const Skills = () => {
   ];
   useScrollReveal();
   return (
-    <section className="section reveal" id="skills">
+    <section className={`${className} reveal`} id="skills">
       <h2 className="section-title">Skills</h2>
 
       <div className="container skills">

@@ -21,10 +21,10 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const Projects = ({ className }) => {
     
   return (
-    <section id="projects" className="section">
+    <section id="projects" className={`${className}`}>
       <div className="Projects">
         <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
