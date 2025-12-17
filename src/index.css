@@ -397,7 +397,7 @@ body {
 /* Reveal Animation */
 
 .section {
-  animation: moveUpOnLoad 3s ease forwards;
+  animation: moveUpOnLoad 5s ease forwards;
 }
 
 @keyframes moveUpOnLoad {
