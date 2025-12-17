@@ -1,8 +1,8 @@
 import React from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const About = () => {
-
-
+  useScrollReveal();
   return (
     <section id="about" className="section reveal-item">
       <div className="About">
