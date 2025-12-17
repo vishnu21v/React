@@ -8,8 +8,32 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import useViewportVisibility from "./hooks/useViewportVisibility";
 
+
 function App() {
-  useViewportVisibility();
+  useEffect(() => {
+    const sections = document.querySelectorAll(".section");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      {
+        rootMargin: "-30% 0px -30% 0px",
+        threshold: 0
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="app">
       <Navbar />
