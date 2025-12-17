@@ -394,3 +394,25 @@ body {
 
 
 
+/* Reveal Animation */
+
+.section {
+  animation: moveUpOnLoad 3s ease forwards;
+}
+
+@keyframes moveUpOnLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
