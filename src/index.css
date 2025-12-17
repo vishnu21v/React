@@ -370,35 +370,3 @@ body {
 
 
 
-
-/* ------------------ */
-/* Reveal Items */
-/* ------------------ */
-.reveal-item {
-  opacity: 0.2;               /* partially visible */
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-  transition-delay: 3s;       /* 3 seconds delay */
-}
-
-.reveal-item.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ------------------ */
-/* Section Styling */
-/* ------------------ */
-.section {
-  padding: 4rem 0;
-}
-
-.About {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
