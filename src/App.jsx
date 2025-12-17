@@ -1,6 +1,6 @@
 import React from "react";
 import useScrollReveal from "./hooks/useScrollReveal";
-
+import useViewportVisibility from "./hooks/useViewportVisibility";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 function App() {
   useScrollReveal(); // Activate the scroll reveal hook
-
+  useViewportVisibility();
   return (
     <div className="app">
       <Navbar />
