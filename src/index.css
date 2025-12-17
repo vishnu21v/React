@@ -431,3 +431,18 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+.section {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.section.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
