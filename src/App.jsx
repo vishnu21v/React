@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Certificates from "./components/Certificates";
 
 function App() {
   useScrollReveal(); // Activate the scroll reveal hook
@@ -20,6 +21,7 @@ function App() {
         <About className="section" />
         <Skills className="section" />
         <Projects className="section" />
+        <Certificates className="section" />
         <Contact className="section" />
       </main>
       <Footer />
