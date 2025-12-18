@@ -452,25 +452,36 @@ body {
   margin-right: 5%;
 }
 
-/* Constrain slider width */
+/* Wider container */
 .projects-slider {
-  max-width: 1000px;
+  max-width: 1200px;   /* increased */
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* Track */
+/* Track with gap */
 .projects-track {
   display: flex;
+  gap: 2.5rem;         /* increased gap */
   transition: transform 0.6s ease-in-out;
 }
 
-/* Card */
+/* Card now 80% width */
 .project-card {
-  min-width: 100%;
-  padding: 32px;
+  flex: 0 0 80%;
+  padding: 3rem;       /* increased padding */
   background: #111;
-  border-radius: 18px;
+  border-radius: 20px;
+}
+
+/* Optional: subtle depth */
+.project-card:not(:hover) {
+  opacity: 0.95;
+}
+
+/* Dots spacing */
+.slider-dots {
+  margin-top: 2rem;
 }
 
 

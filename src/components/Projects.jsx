@@ -57,7 +57,8 @@ const Projects = ({ className }) => {
       >
         <div
           className="projects-track"
-          style={{ transform: `translateX(-${index * 100}%)` }}
+          style={{transform: `translateX(-${index * 90}%)`,}}
+
         >
           {projects.map((p) => (
             <article key={p.title} className="project-card">
