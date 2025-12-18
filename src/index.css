@@ -525,26 +525,22 @@ body {
 
 
 /* certificate section*/
-
-/* Slider container */
 .certificates-slider {
   overflow: hidden;
   width: 100%;
+  padding-left: 5%; /* front gap */
 }
 
 .certificates-track {
   display: flex;
-  gap: 32px; /* same as JS GAP */
-  transition: transform 0.6s ease-in-out;
-  padding-left: 32px; /* leading peek */
+  gap: 32px;
+  flex-wrap: nowrap;
 }
 
-/* Flip card */
 .flip-card {
-  width: 95%;
+  flex: 0 0 95%; /* 95% width card */
   height: 310px;
   perspective: 1000px;
-  flex: 0 0 95%;
 }
 
 .flip-card-inner {
@@ -589,12 +585,12 @@ body {
   object-fit: cover;
 }
 
-/* Optional styling for links */
 .link {
   color: #fff;
   text-decoration: underline;
   margin-top: 10px;
   font-weight: 500;
 }
+
 
 /* certificate section ends here */

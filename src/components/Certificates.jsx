@@ -18,83 +18,70 @@ const certificates = [
   },
 ];
 
-const SLIDE_DELAY = 8000; // 8 seconds
-const GAP = 32; // matches CSS
-
 export default function Certificates() {
-  const [index, setIndex] = useState(0);
-  const timerRef = useRef(null);
-  const slideRef = useRef(null);
-  const [slideWidth, setSlideWidth] = useState(0);
+  const trackRef = useRef(null);
+  const [offset, setOffset] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  // Measure the width of a slide
-  useEffect(() => {
-    if (slideRef.current) {
-      setSlideWidth(slideRef.current.offsetWidth);
-    }
-  }, []);
-
-  const clearTimer = () => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-      timerRef.current = null;
-    }
-  };
-
-  const startTimer = () => {
-    clearTimer();
-    timerRef.current = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % certificates.length);
-    }, SLIDE_DELAY);
-  };
+  const speed = 0.3; // pixels per frame (adjust for 8s per card approx)
 
   useEffect(() => {
-    startTimer();
-    return clearTimer;
-  }, [index]);
+    let animationFrameId;
+
+    const animate = () => {
+      if (!isPaused && trackRef.current) {
+        const track = trackRef.current;
+        const totalWidth = track.scrollWidth / 2; // because we duplicate items
+        let newOffset = offset + speed;
+        if (newOffset >= totalWidth) {
+          newOffset = 0; // reset to start
+        }
+        setOffset(newOffset);
+      }
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [offset, isPaused]);
+
+  // Duplicate items for infinite effect
+  const duplicatedCertificates = [...certificates, ...certificates];
 
   return (
     <section className="sec" id="certificate">
-      <div className="container cer">
+      <div
+        className="certificates-slider"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div
-          className="certificates-slider"
-          onMouseEnter={clearTimer}
-          onMouseLeave={startTimer}
+          className="certificates-track"
+          ref={trackRef}
+          style={{ transform: `translateX(-${offset}px)` }}
         >
-          <div
-            className="certificates-track"
-            style={{ transform: `translateX(-${index * (slideWidth + GAP)}px)` }}
-          >
-            {certificates.map((cert, i) => (
-              <div
-                className="cerholder flip-card"
-                key={i}
-                ref={i === 0 ? slideRef : null}
-              >
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <img
-                      src={cert.img}
-                      alt={cert.title}
-                      className="cerimg"
-                    />
-                  </div>
-                  <div className="flip-card-back">
-                    <h1>Certificate</h1>
-                    <h2>{cert.title}</h2>
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link"
-                    >
-                      For more details
-                    </a>
-                  </div>
+          {duplicatedCertificates.map((cert, i) => (
+            <div className="cerholder flip-card" key={i}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <img src={cert.img} alt={cert.title} className="cerimg" />
+                </div>
+                <div className="flip-card-back">
+                  <h1>Certificate</h1>
+                  <h2>{cert.title}</h2>
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link"
+                  >
+                    For more details
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
