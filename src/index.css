@@ -444,12 +444,12 @@ body {
 
 
 
+/* FULL WIDTH SECTION */
 /* Section already has padding & margins */
 .projects-section {
   padding: 4rem 1rem 1rem;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: inherit;
 }
 
 /* Constrain slider width */
@@ -471,4 +471,40 @@ body {
   padding: 32px;
   background: #111;
   border-radius: 18px;
+}
+
+
+/* Tech pills */
+.project-tech {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.project-tech span {
+  background: #222;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #4da3ff;
 }
