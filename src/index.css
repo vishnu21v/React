@@ -520,3 +520,81 @@ body {
 .dot.active {
   background: #4da3ff;
 }
+
+
+
+
+/* certificate section*/
+
+/* Slider container */
+.certificates-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.certificates-track {
+  display: flex;
+  gap: 32px; /* same as JS GAP */
+  transition: transform 0.6s ease-in-out;
+  padding-left: 32px; /* leading peek */
+}
+
+/* Flip card */
+.flip-card {
+  width: 95%;
+  height: 310px;
+  perspective: 1000px;
+  flex: 0 0 95%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 1px 1px 40px 1px #000000;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+}
+
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(174, 101, 23);
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.cerimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional styling for links */
+.link {
+  color: #fff;
+  text-decoration: underline;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* certificate section ends here */
