@@ -471,7 +471,7 @@ body {
 .project-card {
   flex: 0 0 95%;
   padding: 3.5rem;
-  background: #111;
+  background: inherit;
   border-radius: 22px;
 }
 
