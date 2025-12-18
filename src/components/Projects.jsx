@@ -21,11 +21,21 @@ const projects = [
   },
 ];
 
-const SLIDE_DELAY = 10000; // 10 seconds
+const SLIDE_DELAY = 10000;
+const GAP = 40; // must match CSS gap
 
 const Projects = ({ className }) => {
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
+  const slideRef = useRef(null);
+  const [slideWidth, setSlideWidth] = useState(0);
+
+  // Measure slide width once
+  useEffect(() => {
+    if (slideRef.current) {
+      setSlideWidth(slideRef.current.offsetWidth);
+    }
+  }, []);
 
   const clearTimer = () => {
     if (timerRef.current) {
@@ -57,11 +67,16 @@ const Projects = ({ className }) => {
       >
         <div
           className="projects-track"
-          style={{transform: `translateX(-${index * 90}%)`,}}
-
+          style={{
+            transform: `translateX(-${index * (slideWidth + GAP)}px)`,
+          }}
         >
-          {projects.map((p) => (
-            <article key={p.title} className="project-card">
+          {projects.map((p, i) => (
+            <article
+              key={p.title}
+              className="project-card"
+              ref={i === 0 ? slideRef : null}
+            >
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
 

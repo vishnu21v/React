@@ -454,35 +454,34 @@ body {
 
 /* Wider container */
 .projects-slider {
-  max-width: 1200px;   /* increased */
+  max-width: 1300px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* Track with gap */
+/* Track */
 .projects-track {
   display: flex;
-  gap: 2.5rem;         /* increased gap */
+  gap: 40px; /* MUST match JS GAP */
   transition: transform 0.6s ease-in-out;
 }
 
-/* Card now 80% width */
+/* Card – 80% width for peek */
 .project-card {
   flex: 0 0 80%;
-  padding: 3rem;       /* increased padding */
+  padding: 3rem;
   background: #111;
   border-radius: 20px;
 }
 
-/* Optional: subtle depth */
-.project-card:not(:hover) {
-  opacity: 0.95;
-}
-
-/* Dots spacing */
+/* Dots */
 .slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin-top: 2rem;
 }
+
 
 
 /* Tech pills */
