@@ -445,34 +445,55 @@ body {
 
 
 /* the project srcoll */
-
-.projects {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
+/* FULL WIDTH SECTION */
+.projects-section {
+  width: 100%;
+  padding: 80px 0;
 }
 
+/* Slider stretches full width */
 .projects-slider {
+  width: 100%;
   overflow: hidden;
 }
 
+/* Track slides horizontally */
 .projects-track {
   display: flex;
   transition: transform 0.6s ease-in-out;
 }
 
+/* Card stays centered */
 .project-card {
   min-width: 100%;
-  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
   background: #111;
-  border-radius: 16px;
+  border-radius: 18px;
 }
 
+/* Tech pills */
+.project-tech {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.project-tech span {
+  background: #222;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* Dots */
 .slider-dots {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .dot {

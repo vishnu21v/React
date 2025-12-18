@@ -21,67 +21,71 @@ const projects = [
   },
 ];
 
+const SLIDE_DELAY = 10000; // 10 seconds
+
 const Projects = ({ className }) => {
   const [index, setIndex] = useState(0);
-  const intervalRef = useRef(null);
+  const timerRef = useRef(null);
 
-  const startAutoSlide = () => {
-    intervalRef.current = setInterval(() => {
-      setIndex((prev) => (prev + 1) % projects.length);
-    }, 10000);
+  const clearTimer = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
   };
 
-  const stopAutoSlide = () => {
-    clearInterval(intervalRef.current);
+  const startTimer = () => {
+    clearTimer();
+    timerRef.current = setTimeout(() => {
+      setIndex((prev) => (prev + 1) % projects.length);
+    }, SLIDE_DELAY);
   };
 
   useEffect(() => {
-    startAutoSlide();
-    return () => stopAutoSlide();
-  }, []);
+    startTimer();
+    return clearTimer;
+  }, [index]);
 
   return (
-    <section id="projects" className={className}>
-      <div className="projects">
-        <h2 className="section-title">Projects</h2>
+    <section id="projects" className={`projects-section ${className || ""}`}>
+      <h2 className="section-title">Projects</h2>
 
-        {/* Slider */}
+      <div
+        className="projects-slider"
+        onMouseEnter={clearTimer}
+        onMouseLeave={startTimer}
+      >
         <div
-          className="projects-slider"
-          onMouseEnter={stopAutoSlide}
-          onMouseLeave={startAutoSlide}
+          className="projects-track"
+          style={{ transform: `translateX(-${index * 100}%)` }}
         >
-          <div
-            className="projects-track"
-            style={{ transform: `translateX(-${index * 100}%)` }}
-          >
-            {projects.map((p) => (
-              <article key={p.title} className="project-card">
-                <h3>{p.title}</h3>
-                <p>{p.desc}</p>
-                <div className="project-tech">
-                  {p.tech.map((t) => (
-                    <span key={t}>{t}</span>
-                  ))}
-                </div>
-                <a href={p.link} className="project-link">
-                  View repo →
-                </a>
-              </article>
-            ))}
-          </div>
-        </div>
+          {projects.map((p) => (
+            <article key={p.title} className="project-card">
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
 
-        {/* Dots */}
-        <div className="slider-dots">
-          {projects.map((_, i) => (
-            <span
-              key={i}
-              className={`dot ${index === i ? "active" : ""}`}
-              onClick={() => setIndex(i)}
-            />
+              <div className="project-tech">
+                {p.tech.map((t) => (
+                  <span key={t}>{t}</span>
+                ))}
+              </div>
+
+              <a href={p.link} className="project-link">
+                View repo →
+              </a>
+            </article>
           ))}
         </div>
+      </div>
+
+      <div className="slider-dots">
+        {projects.map((_, i) => (
+          <span
+            key={i}
+            className={`dot ${index === i ? "active" : ""}`}
+            onClick={() => setIndex(i)}
+          />
+        ))}
       </div>
     </section>
   );
