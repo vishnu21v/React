@@ -1,5 +1,4 @@
 import React from "react";
-import useScrollReveal from "./hooks/useScrollReveal";
 import useViewportVisibility from "./hooks/useViewportVisibility";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
