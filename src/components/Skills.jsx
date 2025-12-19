@@ -37,11 +37,6 @@ const Skills = ({ className }) => {
     { name: "Flickr", icon: faFlickr },
     { name: "HTML", icon: faHtml5 },
     { name: "CSS", icon: faCss3Alt },
-    { name: "JS", icon: faJs },
-    { name: "Python", icon: faPython },
-    { name: "Java", icon: faJava },
-    { name: "Figma", icon: faFigma },
-    { name: "Git", icon: faGitAlt },
     
   ];
 
