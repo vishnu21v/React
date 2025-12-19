@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
 const certificates = [
   {
@@ -18,66 +18,21 @@ const certificates = [
   },
 ];
 
-const SLIDE_DELAY = 8000; // 8 seconds
-const GAP = 32; // matches CSS
-
 export default function Certificates() {
-  const [index, setIndex] = useState(0);
-  const timerRef = useRef(null);
-  const slideRef = useRef(null);
-  const [slideWidth, setSlideWidth] = useState(0);
-
-  // Measure the width of a slide
-  useEffect(() => {
-    if (slideRef.current) {
-      setSlideWidth(slideRef.current.offsetWidth);
-    }
-  }, []);
-
-  const clearTimer = () => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-      timerRef.current = null;
-    }
-  };
-
-  const startTimer = () => {
-    clearTimer();
-    timerRef.current = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % certificates.length);
-    }, SLIDE_DELAY);
-  };
-
-  useEffect(() => {
-    startTimer();
-    return clearTimer;
-  }, [index]);
-
   return (
     <section className="sec" id="certificate">
       <div className="container cer">
-        <div
-          className="certificates-slider"
-          onMouseEnter={clearTimer}
-          onMouseLeave={startTimer}
-        >
-          <div
-            className="certificates-track"
-            style={{ transform: `translateX(-${index * (slideWidth + GAP)}px)` }}
-          >
-            {certificates.map((cert, i) => (
-              <div
-                className="cerholder flip-card"
-                key={i}
-                ref={i === 0 ? slideRef : null}
-              >
+        {/* 🔹 Heading */}
+        <h2 className="section-title">Certificates</h2>
+
+        {/* 🔹 Infinite Slider */}
+        <div className="cer-slider">
+          <div className="cer-track">
+            {[...certificates, ...certificates].map((cert, i) => (
+              <div className="cer-item flip-card" key={i}>
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img
-                      src={cert.img}
-                      alt={cert.title}
-                      className="cerimg"
-                    />
+                    <img src={cert.img} alt={cert.title} className="cerimg" />
                   </div>
                   <div className="flip-card-back">
                     <h1>Certificate</h1>
@@ -96,6 +51,7 @@ export default function Certificates() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

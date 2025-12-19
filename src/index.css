@@ -524,73 +524,35 @@ body {
 
 
 
-/* certificate section*/
-.certificates-slider {
+/* Certificate Section */
+
+.cer-slider {
   overflow: hidden;
-  width: 80%;
-  padding-left: 5%; /* front gap */
+  width: 100%;
 }
 
-.certificates-track {
+.cer-track {
   display: flex;
   gap: 32px;
-  flex-wrap: nowrap;
+  animation: cer-scroll 6s linear infinite;
 }
 
-.flip-card {
-  flex: 0 0 55%; /* 95% width card */
-  height: 110px;
-  perspective: 500px;
+.cer-slider:hover .cer-track {
+  animation-play-state: paused;
 }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 1px 1px 40px 1px #000000;
+.cer-item {
+  flex: 0 0 95%;
+  height: 310px;
+  perspective: 1000px;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateX(180deg);
+/* Infinite movement */
+@keyframes cer-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-}
-
-.flip-card-back {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(174, 101, 23);
-  color: white;
-  transform: rotateX(180deg);
-}
-
-.cerimg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.link {
-  color: #fff;
-  text-decoration: underline;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-
-/* certificate section ends here */
