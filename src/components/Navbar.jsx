@@ -17,7 +17,7 @@ const Navbar = () => {
     <header className="nav">
       <div className="nav-inner">
         <a href="#home" className="logo">
-          Vishnu<span>.</span>
+          Vishnu<span>.</span>V
         </a>
         <nav className={`nav-links ${open ? "open" : ""}`}>
           {links.map((l) => (

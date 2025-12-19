@@ -65,7 +65,7 @@ export default function Certificates() {
   };
 
   return (
-    <section id="certificate" className="sec">
+    <section id="certificates" className="sec">
       <h2 className="section-title">Certificates</h2>
 
       <div
