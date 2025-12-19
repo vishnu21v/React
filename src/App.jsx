@@ -12,7 +12,7 @@ import { useScrollReveal } from "./hooks/useScrollReveal";
 
 function App() {
 
-  useScrollReveal(0.06);
+  useScrollReveal();
 
   return (
     <div className="app">
