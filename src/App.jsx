@@ -11,7 +11,7 @@ import Certificates from "./components/Certificates";
 import { useScrollReveal } from "./hooks/useScrollReveal";
 
 function App() {
-  useViewportVisibility();
+
   useScrollReveal(0.06);
 
   return (
