@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const certificates = [
+const certificates = ({ className }) => [
   {
     title: "Python Basics",
     img: "https://live.staticflickr.com/65535/53899268518_3575c933be.jpg",
@@ -50,7 +50,7 @@ export default function Certificates() {
   const duplicatedCertificates = [...certificates, ...certificates];
 
   return (
-    <section className="sec" id="certificate">
+    <section className={`sec ${className}`} id="certificate">
       <div
         className="certificates-slider"
         onMouseEnter={() => setIsPaused(true)}
