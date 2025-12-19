@@ -27,25 +27,31 @@ export default function Certificates() {
   const trackRef = useRef(null);
   const rafRef = useRef(null);
   const offsetRef = useRef(0);
+  const isPausedRef = useRef(false);
 
   useEffect(() => {
     const track = trackRef.current;
-    const speed = 0.35; // smooth continuous speed
+    const speed = 0.35; // scrolling speed
     const gap = 32;
     const cardWidth = 400 + gap;
 
+    // Clone the first few cards to prevent gap
+    const clones = Array.from(track.children).map((child) => child.cloneNode(true));
+    clones.forEach((clone) => track.appendChild(clone));
+
     const animate = () => {
-      offsetRef.current -= speed;
-      track.style.transform = `translateX(${offsetRef.current}px)`;
-
-      const first = track.children[0];
-
-      if (Math.abs(offsetRef.current) >= cardWidth) {
-        track.appendChild(first);
-        offsetRef.current += cardWidth;
+      if (!isPausedRef.current) {
+        offsetRef.current -= speed;
         track.style.transform = `translateX(${offsetRef.current}px)`;
-      }
 
+        // move first card to the end when fully out
+        if (Math.abs(offsetRef.current) >= cardWidth) {
+          const first = track.children[0];
+          track.appendChild(first);
+          offsetRef.current += cardWidth;
+          track.style.transform = `translateX(${offsetRef.current}px)`;
+        }
+      }
       rafRef.current = requestAnimationFrame(animate);
     };
 
@@ -54,11 +60,23 @@ export default function Certificates() {
     return () => cancelAnimationFrame(rafRef.current);
   }, []);
 
+  const handleMouseEnter = () => {
+    isPausedRef.current = true;
+  };
+
+  const handleMouseLeave = () => {
+    isPausedRef.current = false;
+  };
+
   return (
     <section id="certificate" className="sec">
       <h2 className="section-title">Certificates</h2>
 
-      <div className="cer-slider">
+      <div
+        className="cer-slider"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="cer-track" ref={trackRef}>
           {certificates.map((cert, i) => (
             <div className="cer-item" key={i}>
