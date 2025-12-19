@@ -1,24 +1,29 @@
 import { useEffect } from "react";
 
-export function useScrollReveal(threshold = 0.06) {
+export function useScrollReveal(offset = 0.06) {
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    if (!sections.length) return;
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target); // reveal only once
-          }
-        });
-      },
-      { threshold } // 0.06 = 6% visible
-    );
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-    sections.forEach((section) => observer.observe(section));
+        if (rect.top < windowHeight * (1 - offset)) {
+          section.classList.add("visible");
+        }
+      });
+    };
 
-    return () => observer.disconnect();
-  }, [threshold]);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    // Trigger on mount in case some sections are already in view
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, [offset]);
 }
