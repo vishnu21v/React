@@ -16,10 +16,9 @@ const certificates = [
     img: "https://live.staticflickr.com/65535/53899585713_3cdac9e60c_w.jpg",
     link: "#",
   },
-
 ];
 
-export default function Certificates() {
+export default function Certificates({ className }) {
   const trackRef = useRef(null);
   const rafRef = useRef(null);
   const offsetRef = useRef(0);
@@ -40,7 +39,6 @@ export default function Certificates() {
         offsetRef.current -= speed;
         track.style.transform = `translateX(${offsetRef.current}px)`;
 
-        // move first card to the end when fully out
         if (Math.abs(offsetRef.current) >= cardWidth) {
           const first = track.children[0];
           track.appendChild(first);
@@ -65,7 +63,7 @@ export default function Certificates() {
   };
 
   return (
-    <section id="certificates" className="sec">
+    <section id="certificates" className={`${className}`}>
       <h2 className="section-title">Certificates</h2>
 
       <div
