@@ -538,7 +538,7 @@ body {
 }
 
 .flip-card {
-  flex: 0 0 95%; /* 95% width card */
+  flex: 0 0 55%; /* 95% width card */
   height: 310px;
   perspective: 1000px;
 }
