@@ -16,36 +16,42 @@ const certificates = [
     img: "https://live.staticflickr.com/65535/53899585713_3cdac9e60c_w.jpg",
     link: "#",
   },
+  {
+    title: "Google UX",
+    img: "https://live.staticflickr.com/65535/53899585713_3cdac9e60c_w.jpg",
+    link: "#",
+  },
 ];
 
 export default function Certificates() {
   const trackRef = useRef(null);
-  const animationRef = useRef(null);
-  const position = useRef(0);
+  const rafRef = useRef(null);
+  const offsetRef = useRef(0);
 
   useEffect(() => {
     const track = trackRef.current;
-    const speed = 0.4; // pixels per frame (controls smoothness)
+    const speed = 0.35; // smooth continuous speed
+    const gap = 32;
+    const cardWidth = 400 + gap;
 
     const animate = () => {
-      position.current -= speed;
-      track.style.transform = `translateX(${position.current}px)`;
+      offsetRef.current -= speed;
+      track.style.transform = `translateX(${offsetRef.current}px)`;
 
       const first = track.children[0];
-      const firstWidth = first.offsetWidth + 32; // card width + gap
 
-      if (Math.abs(position.current) >= firstWidth) {
+      if (Math.abs(offsetRef.current) >= cardWidth) {
         track.appendChild(first);
-        position.current += firstWidth;
-        track.style.transform = `translateX(${position.current}px)`;
+        offsetRef.current += cardWidth;
+        track.style.transform = `translateX(${offsetRef.current}px)`;
       }
 
-      animationRef.current = requestAnimationFrame(animate);
+      rafRef.current = requestAnimationFrame(animate);
     };
 
-    animationRef.current = requestAnimationFrame(animate);
+    rafRef.current = requestAnimationFrame(animate);
 
-    return () => cancelAnimationFrame(animationRef.current);
+    return () => cancelAnimationFrame(rafRef.current);
   }, []);
 
   return (
@@ -56,7 +62,20 @@ export default function Certificates() {
         <div className="cer-track" ref={trackRef}>
           {certificates.map((cert, i) => (
             <div className="cer-item" key={i}>
-              <img src={cert.img} alt={cert.title} />
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src={cert.img} alt={cert.title} className="cerimg" />
+                  </div>
+
+                  <div className="flip-card-back">
+                    <h2>{cert.title}</h2>
+                    <a href={cert.link} target="_blank" rel="noreferrer">
+                      View Certificate →
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
