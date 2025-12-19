@@ -9,10 +9,12 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Certificates from "./components/Certificates";
+import { useScrollReveal } from "./hooks/useScrollReveal";
 
 function App() {
-  useScrollReveal(); // Activate the scroll reveal hook
   useViewportVisibility();
+  useScrollReveal(0.06);
+
   return (
     <div className="app">
       <Navbar />
