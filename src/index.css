@@ -297,7 +297,7 @@ body {
 .scroller_content {
   display: flex;
   width: max-content;
-  animation: scroll 30s linear infinite;
+  animation: scroll 40s linear infinite;
   list-style: none;
   padding: 0;
   margin: 0;
