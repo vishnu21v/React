@@ -613,8 +613,6 @@ section {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  min-height: 100vh; /* Ensure each section takes full viewport height */
-  padding: 50px;     /* Optional padding */
 }
 
 section.visible {
