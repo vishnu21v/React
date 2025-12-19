@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function useScrollReveal() {
+export function useScrollReveal() {
   useEffect(() => {
     const sections = document.querySelectorAll(".section");
 
