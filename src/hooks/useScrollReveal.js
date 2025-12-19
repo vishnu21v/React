@@ -4,8 +4,8 @@ export function useScrollReveal() {
   useEffect(() => {
     const sections = document.querySelectorAll(".section");
 
-    // Initially hide all sections
-    sections.forEach((section) => {
+    // Initially hide all sections except top ones
+    sections.forEach((section, index) => {
       section.style.opacity = 0;
       section.style.transform = "translateY(30px)";
       section.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
@@ -13,10 +13,10 @@ export function useScrollReveal() {
 
     const handleScroll = () => {
       const windowHeight = window.innerHeight;
-      const revealPoint = windowHeight * 0.5; // 70% from top, i.e., lower 30%
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
+        const revealPoint = windowHeight * 0.85; // 15% from bottom
 
         if (rect.top < revealPoint) {
           section.style.opacity = 1;
