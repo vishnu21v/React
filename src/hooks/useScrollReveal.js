@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export function useScrollReveal() {
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll(".section");
 
     // Initially hide all sections
     sections.forEach((section) => {
