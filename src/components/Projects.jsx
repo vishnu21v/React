@@ -21,8 +21,8 @@ const projects = [
   },
 ];
 
-const SLIDE_DELAY = 10000;
-const GAP = 40; // must match CSS gap
+const SLIDE_DELAY = 5000; // Slide interval
+const GAP = 32; // Must match CSS gap
 
 const Projects = ({ className }) => {
   const [index, setIndex] = useState(0);
@@ -30,11 +30,16 @@ const Projects = ({ className }) => {
   const slideRef = useRef(null);
   const [slideWidth, setSlideWidth] = useState(0);
 
-  // Measure slide width once
+  // Measure slide width dynamically
   useEffect(() => {
-    if (slideRef.current) {
-      setSlideWidth(slideRef.current.offsetWidth);
-    }
+    const updateWidth = () => {
+      if (slideRef.current) {
+        setSlideWidth(slideRef.current.offsetWidth + GAP);
+      }
+    };
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
   const clearTimer = () => {
@@ -68,7 +73,7 @@ const Projects = ({ className }) => {
         <div
           className="projects-track"
           style={{
-            transform: `translateX(-${index * (slideWidth + GAP)}px)`,
+            transform: `translateX(-${index * slideWidth}px)`,
           }}
         >
           {projects.map((p, i) => (
