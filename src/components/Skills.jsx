@@ -1,5 +1,5 @@
 import React from "react";
-import useScrollReveal from "../hooks/useScrollReveal";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -25,7 +25,7 @@ const Skills = ({ className }) => {
     { name: "Figma", icon: faFigma },
     { name: "Git", icon: faGitAlt },
   ];
-  useScrollReveal();
+
   return (
     <section className={`${className} reveal`} id="skills">
       <h2 className="section-title">Skills</h2>
