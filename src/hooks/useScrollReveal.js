@@ -13,7 +13,7 @@ export function useScrollReveal() {
 
     const handleScroll = () => {
       const windowHeight = window.innerHeight;
-      const revealPoint = windowHeight * 0.7; // 70% from top, i.e., lower 30%
+      const revealPoint = windowHeight * 0.5; // 70% from top, i.e., lower 30%
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
