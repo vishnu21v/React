@@ -527,7 +527,7 @@ body {
 /* certificate section*/
 .certificates-slider {
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   padding-left: 5%; /* front gap */
 }
 
@@ -539,8 +539,8 @@ body {
 
 .flip-card {
   flex: 0 0 55%; /* 95% width card */
-  height: 310px;
-  perspective: 1000px;
+  height: 110px;
+  perspective: 500px;
 }
 
 .flip-card-inner {
