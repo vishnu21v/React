@@ -16,11 +16,7 @@ const certificates = [
     img: "https://live.staticflickr.com/65535/53899585713_3cdac9e60c_w.jpg",
     link: "#",
   },
-  {
-    title: "Google UX",
-    img: "https://live.staticflickr.com/65535/53899585713_3cdac9e60c_w.jpg",
-    link: "#",
-  },
+
 ];
 
 export default function Certificates() {
