@@ -716,9 +716,7 @@ body {
   transform: translateY(50%);
 }
 
-.contact-btn:hover {
-  color: #dbcc03;
-}
+
 .contact-btn::before {
   transition-delay: .5s;
 }
