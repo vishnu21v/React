@@ -623,6 +623,7 @@ body {
 .top{
   display:flex;
   align-items: center;
+  flex-direction:column;
 }
 
 .center{
@@ -634,5 +635,5 @@ body {
 .bootomnav{
   display:flex;
   flex-direction: column;
-  
+
 }
