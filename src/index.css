@@ -639,11 +639,15 @@ body {
   flex-direction: column;
   width: 50%;
   gap:4%;
-  text-decoration: none;
-  color:white;
   margin-left:0;
   justify-content: left;
   padding: 4%;
+}
+.bottomnav li{
+  text-decoration: none;
+  color:white;
+  display: flex;
+  gap:3%;
 }
 .contact-buttons{
   display:flex;
