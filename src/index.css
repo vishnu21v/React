@@ -636,5 +636,12 @@ body {
 .bootomnav{
   display:flex;
   flex-direction: column;
-
+  width: 50%;
+  margin-left:0;
+}
+.contact-buttons{
+  display:flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right:0;
 }
