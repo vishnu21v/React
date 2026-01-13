@@ -717,7 +717,7 @@ body {
 }
 
 .contact-btn:hover {
-  color: #00e5ff;
+  color: #dbcc03;
 }
 .contact-btn::before {
   transition-delay: .5s;
