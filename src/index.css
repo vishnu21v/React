@@ -634,7 +634,7 @@ body {
   width:100%;
 }
 
-.bootomnav{
+.bottomnav{
   display:flex;
   flex-direction: column;
   width: 50%;
