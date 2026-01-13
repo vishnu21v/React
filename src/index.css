@@ -646,6 +646,7 @@ body {
 .bottomnav li{
   text-decoration: none;
   text-decoration-color: white;
+  color:white;
   display: flex;
   gap:3%;
 }
@@ -653,6 +654,7 @@ body {
   display:flex;
   flex-direction: row;
   width: 70%;
+  height:max-content;
   margin-right:0;
   justify-content: right;
   padding: 4%;
