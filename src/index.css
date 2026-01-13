@@ -656,6 +656,48 @@ body {
 .bottomnav a {
   text-decoration: none;
   text-decoration-color: white;
+  color:white;
   display: flex;
   gap:3%;
 }
+
+.contact-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+
+  color: #fff;
+  text-decoration: none;
+  background: #222;
+
+  overflow: hidden;
+  z-index: 1;
+}
+
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 0;
+
+  background: #00bcd4; /* hover color */
+  z-index: -1;
+
+  transition: height 0.6s ease;
+  transition-delay: 5s; /* ⏱️ 5 second delay */
+}
+.contact-btn:hover::before {
+  height: 100%;
+}.contact-btn {
+  transition: color 0.3s ease;
+}
+
+.contact-btn:hover {
+  color: #000;
+}
+

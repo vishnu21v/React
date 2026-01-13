@@ -50,7 +50,7 @@ const Contact = ({ className }) => {
             </a>
 
             <a
-              href="https://wa.me/61477317492"
+              href="https://wa.me/+61477317492"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-btn"
