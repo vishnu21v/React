@@ -11,6 +11,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 body {
@@ -28,12 +29,13 @@ body {
   padding:0%;
   padding-top: 0%;
   padding-bottom: 0%;
+  margin: 0%;
 
 }
 .nav {
   position: sticky;
   padding:0.5%;
-  
+
   top: 0;
   z-index: 50;
   background: rgba(15, 23, 42, 0.8);
