@@ -637,7 +637,7 @@ body {
 .bottomnav{
   display:flex;
   flex-direction: column;
-  width: 30%;
+  width: 20%;
   gap:4%;
   margin-left:0;
   justify-content: left;
@@ -653,7 +653,7 @@ body {
 .contact-buttons{
   display:flex;
   flex-direction: row;
-  width: 70%;
+  width: 80%;
   height:max-content;
   margin-right:0;
   justify-content: right;
