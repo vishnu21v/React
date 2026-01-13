@@ -638,8 +638,12 @@ body {
   display:flex;
   flex-direction: column;
   width: 50%;
+  gap:4%;
+  text-decoration: none;
+  color:white;
   margin-left:0;
   justify-content: left;
+  padding: 4%;
 }
 .contact-buttons{
   display:flex;
@@ -647,4 +651,5 @@ body {
   width: 50%;
   margin-right:0;
   justify-content: right;
+  padding: 4%;
 }
