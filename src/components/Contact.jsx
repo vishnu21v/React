@@ -4,10 +4,16 @@ const Contact = ({ className }) => {
   return (
     <section id="contact" className={`${className}`}>
       <div className="Contact">
-        <div>
+        <div className="top">
           <h2 className="section-title">Contact</h2>
         </div>
-        <div>
+        <div classname="center">
+          <div className="bottomnav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#Certificate">Certificate</a></li>
+          </div>
           <div className="contact-buttons">
             <a
               href="tel:+614XXXXXXXX"
