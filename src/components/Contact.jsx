@@ -21,14 +21,14 @@ const Contact = ({ className }) => {
               className="contact-btn"
             >
 
-              📞 Phone
+              📞 
             </a>
 
             <a
               href="mailto:vishnuvaitheeswaran2002@gmail.com"
               className="contact-btn"
             >
-              ✉️ Email
+              ✉️ 
             </a>
 
             <a
@@ -37,7 +37,7 @@ const Contact = ({ className }) => {
               rel="noopener noreferrer"
               className="contact-btn"
             >
-              🔗 LinkedIn
+              🔗 
             </a>
 
             <a
@@ -46,7 +46,7 @@ const Contact = ({ className }) => {
               rel="noopener noreferrer"
               className="contact-btn"
             >
-              💻 GitHub
+              💻 
             </a>
 
             <a
@@ -55,7 +55,7 @@ const Contact = ({ className }) => {
               rel="noopener noreferrer"
               className="contact-btn"
             >
-              💬 WhatsApp
+              💬 
             </a>
          </div>
         </div>
