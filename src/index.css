@@ -720,9 +720,9 @@ body {
   color: #00e5ff;
 }
 .contact-btn::before {
-  transition-delay: 5s;
+  transition-delay: 1.5s;
 }
 
 .contact-btn:hover::before {
-  transition-delay: 5s;
+  transition-delay: 1.5s;
 }
