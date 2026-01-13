@@ -11,8 +11,9 @@ const Contact = ({ className }) => {
           <div className="bottomnav">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#skill">Skill</a></li>
-            <li><a href="#Certificate">Certificate</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Certificates">Certificates</a></li>
           </div>
           <div className="contact-buttons">
             <a
