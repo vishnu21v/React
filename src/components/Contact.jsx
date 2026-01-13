@@ -7,7 +7,7 @@ const Contact = ({ className }) => {
         <div className="top">
           <h2 className="section-title">Contact</h2>
         </div>
-        <div classname="center">
+        <div className="center">
           <div className="bottomnav">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
