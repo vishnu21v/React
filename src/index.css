@@ -642,6 +642,7 @@ body {
   margin-left:0;
   justify-content: left;
   padding: 4%;
+  text-decoration: none;
 }
 .contact-buttons{
   display:flex;
@@ -655,7 +656,6 @@ body {
 .bottomnav a {
   text-decoration: none;
   text-decoration-color: white;
-  color:white;
   display: flex;
   gap:3%;
 }

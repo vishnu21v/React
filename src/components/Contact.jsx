@@ -17,7 +17,7 @@ const Contact = ({ className }) => {
           </div>
           <div className="contact-buttons">
             <a
-              href="tel:+614XXXXXXXX"
+              href="tel:+61477317492"
               className="contact-btn"
             >
 
@@ -32,7 +32,7 @@ const Contact = ({ className }) => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+              href="https://linkedin.com/in/vishnu-vaitheeswaran"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-btn"
@@ -41,7 +41,7 @@ const Contact = ({ className }) => {
             </a>
 
             <a
-              href="https://github.com/YOUR-GITHUB-USERNAME"
+              href="https://github.com/vishnu21v"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-btn"
@@ -50,7 +50,7 @@ const Contact = ({ className }) => {
             </a>
 
             <a
-              href="https://wa.me/614XXXXXXXX"
+              href="https://wa.me/61477317492"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-btn"
