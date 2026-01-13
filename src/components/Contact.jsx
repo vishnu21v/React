@@ -5,7 +5,6 @@ const Contact = ({ className }) => {
     <section id="contact" className={`${className}`}>
       <div className="Contact">
         <h2 className="section-title">Contact</h2>
-        <p>Feel free to reach out through any of the platforms below.</p>
 
         <div className="contact-buttons">
           <a
