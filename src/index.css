@@ -710,7 +710,7 @@ body {
   );
 
   transform: translateY(0);
-  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform .5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-btn:hover::before {
   transform: translateY(50%);
