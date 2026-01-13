@@ -637,7 +637,7 @@ body {
 .bottomnav{
   display:flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
   gap:4%;
   margin-left:0;
   justify-content: left;
@@ -645,14 +645,14 @@ body {
 }
 .bottomnav li{
   text-decoration: none;
-  color:white;
+  text-decoration-color: white;
   display: flex;
   gap:3%;
 }
 .contact-buttons{
   display:flex;
-  flex-direction: column;
-  width: 50%;
+  flex-direction: row;
+  width: 70%;
   margin-right:0;
   justify-content: right;
   padding: 4%;
