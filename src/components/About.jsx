@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const sectionVariants = {
   hidden: {
-    opacity: 0.15,
+    opacity: 0.02,
     y: 60,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.2,
+      duration: 2,
       ease: [0.22, 1, 0.36, 1],
       staggerChildren: 0.18,
     },
@@ -27,7 +27,7 @@ const textVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.9,
+      duration: 1.9,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -38,7 +38,7 @@ const waveVariants = {
   wave: {
     rotate: [0, 10, -8, 10, -4, 0],
     transition: {
-      duration: 1.4,
+      duration: 2.4,
       ease: "easeInOut",
       repeat: Infinity,
       repeatDelay: 3,
