@@ -777,3 +777,57 @@ body {
 .silky-link:hover::before {
   transition-delay: 5s;
 }
+.bottomnav.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.silky-vertical {
+  position: relative;
+  display: block;          /* REQUIRED */
+  padding: 14px 18px;
+  width: 220px;            /* adjust as needed */
+
+  background: #0f0f0f;
+  color: #eaeaea;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+
+  border-radius: 10px;
+  overflow: hidden;        /* REQUIRED */
+}
+.silky-vertical::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: 0;
+
+  width: 100%;
+  height: 150%;
+
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 229, 255, 0.18) 45%,
+    rgba(0, 229, 255, 0.45) 50%,
+    rgba(0, 229, 255, 0.18) 55%,
+    transparent 100%
+  );
+
+  transform: translateY(0);
+  transition: transform 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+.silky-vertical:hover::before {
+  transform: translateY(100%);
+  transition-delay: 5s;
+}
+.silky-vertical {
+  z-index: 1;
+}
+
