@@ -840,29 +840,36 @@ body {
 }
 @media (max-width: 768px) {
   .center {
-    flex-direction: column;   /* stack vertically */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 36px;
+    width: 100%;
+    gap: 28px;
   }
 
-  /* TOP: bottom navigation */
+  /* TOP: vertical nav */
   .bottomnav {
     width: 100%;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 14px;
   }
 
-  /* BOTTOM: contact buttons */
+  /* BOTTOM: contact buttons in ONE LINE */
   .contact-buttons {
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 14px;
+    flex-direction: row;      /* 👈 horizontal */
+    flex-wrap: nowrap;        /* 👈 prevent next line */
+    gap: 12px;
+
+    width: auto;              /* 👈 KEY FIX */
+    max-width: 100%;
+    overflow-x: auto;         /* safe on very small screens */
   }
 }
+
 
 
 
