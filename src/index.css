@@ -838,3 +838,20 @@ body {
   transform: translateX(100%);
   transition-delay: 0.15s;
 }
+@media (max-width: 768px) {
+  .bottomnav.vertical {
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .silky-vertical {
+    width: 100%;
+    max-width: 320px;
+
+    padding: 16px 20px;
+    font-size: 1rem;
+
+    border-radius: 14px;
+  }
+}
