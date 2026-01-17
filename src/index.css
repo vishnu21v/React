@@ -820,14 +820,14 @@ body {
   );
 
   transform: translateY(0);
-  transition: transform 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
 }
 .silky-vertical:hover::before {
   transform: translateY(100%);
   transition-delay: 5s;
 }
-.silky-vertical {
-  z-index: 1;
+.silky-vertical:hover::before {
+  transform: translateX(100%);
+  transition-delay: 0.15s; /* 👈 subtle, premium */
 }
-
