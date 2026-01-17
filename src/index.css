@@ -870,6 +870,13 @@ body {
   }
 }
 
+.type-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--contact-text);
+  margin-top: 12px;
+}
 
 
 

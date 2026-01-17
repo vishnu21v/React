@@ -1,53 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-
-const sectionVariants = {
-  hidden: {
-    opacity: 0.02,
-    y: 60,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 2,
-      ease: [0.22, 1, 0.36, 1],
-      staggerChildren: 0.18,
-    },
-  },
-};
-
-const textVariants = {
-  hidden: {
-    opacity: 0,
-    y: 24,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.9,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
-
-const waveVariants = {
-  initial: { rotate: 0 },
-  wave: {
-    rotate: [0, 10, -8, 10, -4, 0],
-    transition: {
-      duration: 2.4,
-      ease: "easeInOut",
-      repeat: Infinity,
-      repeatDelay: 3,
-    },
-  },
-};
-
+import { useTypewriter } from "../hooks/useTypewriter";
 
 const About = ({ className }) => {
+  const typedRole = useTypewriter("Frontend & AI Developer", 70);
+
   return (
     <motion.section
       id="about"
@@ -73,6 +30,18 @@ const About = ({ className }) => {
             👋
           </motion.span>
         </motion.h2>
+
+        {/* 👇 TYPEWRITER LINE */}
+        <motion.p
+          variants={textVariants}
+          style={{
+            fontWeight: 500,
+            letterSpacing: "0.08em",
+            opacity: 0.85,
+          }}
+        >
+          {typedRole}
+        </motion.p>
 
         <motion.p variants={textVariants}>
           I'm an AI / Data / Web enthusiast currently studying and building
