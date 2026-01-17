@@ -8,13 +8,14 @@ const Contact = ({ className }) => {
           <h2 className="section-title">Contact</h2>
         </div>
         <div className="center">
-          <div className="bottomnav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-          </div>
+          <ul className="bottomnav">
+            <li><a href="#home" className="silky-link">Home</a></li>
+            <li><a href="#about" className="silky-link">About</a></li>
+            <li><a href="#skills" className="silky-link">Skills</a></li>
+            <li><a href="#projects" className="silky-link">Projects</a></li>
+            <li><a href="#certificates" className="silky-link">Certificates</a></li>
+          </ul>
+
           <div className="contact-buttons">
             <a
               href="tel:+61477317492"
