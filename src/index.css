@@ -843,6 +843,8 @@ body {
     width: 100%;
     align-items: center;
     gap: 12px;
+    justify-content: center;
+    margin:0%;
   }
 
   .silky-vertical {
@@ -853,5 +855,8 @@ body {
     font-size: 1rem;
 
     border-radius: 14px;
+    justify-content: center;
+    margin:0%;
   }
 }
+
