@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useTypewriter } from "../hooks/useTypewriter";
+import { useTypewriter } from "../hooks/useTypewriterText";
 
 const About = ({ className }) => {
   const typedRole = useTypewriter("Frontend & AI Developer", 70);
