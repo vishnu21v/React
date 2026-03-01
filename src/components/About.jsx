@@ -2,6 +2,43 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTypewriter } from "../hooks/useTypewriterText";
 
+// ── Animation Variants ──────────────────────────────────────────────────────
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: "easeOut" },
+  },
+};
+
+const waveVariants = {
+  initial: { rotate: 0 },
+  wave: {
+    rotate: [0, 22, -10, 22, -5, 0],
+    transition: {
+      duration: 1.8,
+      repeat: Infinity,
+      repeatDelay: 2,
+      ease: "easeInOut",
+    },
+  },
+};
+
+// ── Component ────────────────────────────────────────────────────────────────
 const About = ({ className }) => {
   const typedRole = useTypewriter("Frontend & AI Developer", 70);
 
@@ -31,7 +68,7 @@ const About = ({ className }) => {
           </motion.span>
         </motion.h2>
 
-        {/* 👇 TYPEWRITER LINE */}
+        {/* Typewriter role line */}
         <motion.p
           variants={textVariants}
           style={{
@@ -45,14 +82,14 @@ const About = ({ className }) => {
 
         <motion.p variants={textVariants}>
           I'm an AI / Data / Web enthusiast currently studying and building
-          projects in React, Python, ML, and academic assignments (classification,
-          KNN, decision trees, Flask apps, etc.). I like making things look clean
-          and easy to use.
+          projects in React, Python, ML, and academic assignments
+          (classification, KNN, decision trees, Flask apps, etc.). I like
+          making things look clean and easy to use.
         </motion.p>
 
         <motion.p variants={textVariants}>
-          Right now I'm focusing on: React + Vite, REST APIs, and deploying small
-          apps.
+          Right now I'm focusing on: React + Vite, REST APIs, and deploying
+          small apps.
         </motion.p>
       </div>
     </motion.section>
