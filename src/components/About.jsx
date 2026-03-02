@@ -1,29 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useTypewriter } from "../hooks/useTypewriterText";
 
-// ── Animation Variants ──────────────────────────────────────────────────────
-const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 5,
-      ease: "easeOut",
-      staggerChildren: 0.18,
-    },
-  },
-};
-
-const textVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
+const ROLE_TEXT = "Frontend & AI Developer";
 
 const waveVariants = {
   initial: { rotate: 0 },
@@ -38,23 +16,51 @@ const waveVariants = {
   },
 };
 
-// ── Component ────────────────────────────────────────────────────────────────
+// Looping typewriter — types forward, pauses, deletes, repeats
+const useLoopingTypewriter = (text, typeSpeed = 80, deleteSpeed = 40, pauseMs = 1800) => {
+  const [displayed, setDisplayed] = useState("");
+  const [phase, setPhase] = useState("typing"); // "typing" | "pausing" | "deleting"
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    let timeout;
+
+    if (phase === "typing") {
+      if (index < text.length) {
+        timeout = setTimeout(() => {
+          setDisplayed(text.slice(0, index + 1));
+          setIndex((i) => i + 1);
+        }, typeSpeed);
+      } else {
+        timeout = setTimeout(() => setPhase("deleting"), pauseMs);
+      }
+    } else if (phase === "deleting") {
+      if (index > 0) {
+        timeout = setTimeout(() => {
+          setDisplayed(text.slice(0, index - 1));
+          setIndex((i) => i - 1);
+        }, deleteSpeed);
+      } else {
+        timeout = setTimeout(() => setPhase("typing"), 400);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [phase, index, text, typeSpeed, deleteSpeed, pauseMs]);
+
+  return displayed;
+};
+
 const About = ({ className }) => {
-  const typedRole = useTypewriter("Frontend & AI Developer", 70);
+  const typedRole = useLoopingTypewriter(ROLE_TEXT, 80, 45, 2000);
 
   return (
-    <motion.section
-      id="about"
-      className={`${className} reveal`}
-      variants={sectionVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-120px" }}
-    >
+    // No framer-motion on the section — useScrollReveal handles it
+    <section id="about" className={`${className}`}>
       <div className="About">
-        <motion.h2
+
+        <h2
           className="section-title"
-          variants={textVariants}
           style={{ display: "flex", alignItems: "center", gap: "10px" }}
         >
           About
@@ -66,30 +72,48 @@ const About = ({ className }) => {
           >
             👋
           </motion.span>
-        </motion.h2>
+        </h2>
 
-        {/* Typewriter role line */}
-        <motion.p
-          variants={textVariants}
+        {/* Looping typewriter role */}
+        <p
           style={{
             fontWeight: 500,
             letterSpacing: "0.08em",
             opacity: 0.85,
+            minHeight: "1.5em",   /* prevents layout shift when text is empty */
           }}
         >
           {typedRole}
-        </motion.p>
+          <span
+            style={{
+              display: "inline-block",
+              width: "2px",
+              height: "1em",
+              background: "var(--accent)",
+              marginLeft: "2px",
+              verticalAlign: "middle",
+              animation: "blink 0.8s step-end infinite",
+            }}
+          />
+        </p>
 
-        <motion.p variants={textVariants}>
-        I'm a Computer Science Engineering graduate currently pursuing a Master's in Artificial Intelligence at the Royal Melbourne Institute of Technology (RMIT). I specialize in software development and modern web development, building clean, scalable, and user-focused solutions. Alongside my studies, I work as a freelance developer, helping startups and small businesses create high-performing websites and applications with a strong focus on usability, performance, and real-world impact.
+        <p>
+          I'm a Computer Science Engineering graduate currently pursuing a
+          Master's in Artificial Intelligence at the Royal Melbourne Institute
+          of Technology (RMIT). I specialize in software development and modern
+          web development, building clean, scalable, and user-focused solutions.
+          Alongside my studies, I work as a freelance developer, helping
+          startups and small businesses create high-performing websites and
+          applications with a strong focus on usability, performance, and
+          real-world impact.
+        </p>
 
-        </motion.p>
+        <p>
+          Right now I'm focusing on React, REST APIs, and deploying small apps.
+        </p>
 
-        <motion.p variants={textVariants}>
-          Right now I'm focusing on React, REST APIs, and deployingsmall apps.
-        </motion.p>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
