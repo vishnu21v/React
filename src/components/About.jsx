@@ -81,10 +81,8 @@ const About = ({ className }) => {
         </motion.p>
 
         <motion.p variants={textVariants}>
-          I'm an AI / Data / Web enthusiast currently studying and building
-          projects in React, Python, ML, and academic assignments
-          (classification, KNN, decision trees, Flask apps, etc.). I like
-          making things look clean and easy to use.
+            I'm a Computer Science Engineering graduate currently pursuing a Master's in Artificial Intelligence at the Royal Melbourne Institute of Technology (RMIT). I specialize in software development and modern web development, building clean, scalable, and user-focused solutions. Alongside my studies, I work as a freelance developer, helping startups and small businesses create high-performing websites and applications with a strong focus on usability, performance, and real-world impact.
+            
         </motion.p>
 
         <motion.p variants={textVariants}>
