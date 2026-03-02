@@ -90,13 +90,10 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 3rem 5%;
   gap: 2rem;
 }
 
-.hero-content {
-  width: 70%;
-}
+
 
 .hero-content h1 {
   font-size: clamp(2rem, 5vw, 3.2rem);
