@@ -681,7 +681,7 @@ body {
    block, or paste them at the bottom of your CSS file.
    ============================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 789px) {
 
   /* ── ABOUT ─────────────────────────────────────────────── */
   #about,
