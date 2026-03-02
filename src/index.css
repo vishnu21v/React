@@ -732,7 +732,6 @@ body {
   /* HERO */
   .Hero {
     flex-direction: column-reverse;
-    padding: 2rem 5%;
     gap: 1.5rem;
     text-align: center;
   }
