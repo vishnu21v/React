@@ -12,7 +12,7 @@ const projects = [
       "Maintained a modular and well-structured codebase suitable for deployment and further experimentation."
     ],
     tech: ["Python", "Flask", "Machine Learning"],
-    link: ""
+    link: "https://github.com/vishnu21v/Deep-Fake-Detection"
   },
   {
     title: "Clothing Review Recommender",
