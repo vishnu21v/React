@@ -2,20 +2,27 @@ import React, { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
-    title: "Deepfake Detection (Flask + ML)",
-    desc: "Upload image, model checks real/fake, single-page UI.",
-    tech: ["Flask", "Python", "ML"],
-    link: "#",
+    title: "Deepfake Detection",
+    desc: ["Built a web-based application to detect whether an uploaded image is real or deepfake using a machine learning model.",
+      "Implemented a clean, single-page user interface for seamless image upload and instant prediction results.",
+      "Developed the backend using Flask to manage image uploads, preprocessing, and model inference.",
+      "Integrated Python-based machine learning pipelines for feature extraction and classification.",
+      "Optimized the application for fast response times and smooth user experience.",
+      "Designed the system with scalability in mind to support future deep learning or video-based detection.",
+      "Maintained a modular and well-structured codebase suitable for deployment and further experimentation."
+    ],
+    tech: ["Python", "Flask", "Machine Learning"],
+    link: ""
   },
   {
     title: "Clothing Review Recommender",
-    desc: "NLP pipeline, vectorizer, recommend clothing items.",
+    desc: "Discover clothing you'll love! This NLP-driven system analyzes user reviews, matches preferences with TF-IDF and cosine similarity, and serves recommendations via a Flask API. Responsive frontend for a smooth experience.",
     tech: ["Python", "NLP", "Flask"],
     link: "#",
   },
   {
     title: "Pymon Game (OOP)",
-    desc: "Python game with CSV import, menus, locations.",
+    desc: "A Python adventure game featuring CSV-powered data, interactive menus, and modular OOP design. Explore locations, manage your team, and enjoy a user-friendly interface built for easy expansion.",
     tech: ["Python", "OOP"],
     link: "#",
   },
