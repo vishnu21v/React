@@ -81,13 +81,12 @@ const About = ({ className }) => {
         </motion.p>
 
         <motion.p variants={textVariants}>
-            I'm a Computer Science Engineering graduate currently pursuing a Master's in Artificial Intelligence at the Royal Melbourne Institute of Technology (RMIT). I specialize in software development and modern web development, building clean, scalable, and user-focused solutions. Alongside my studies, I work as a freelance developer, helping startups and small businesses create high-performing websites and applications with a strong focus on usability, performance, and real-world impact.
-            
+        I'm a Computer Science Engineering graduate currently pursuing a Master's in Artificial Intelligence at the Royal Melbourne Institute of Technology (RMIT). I specialize in software development and modern web development, building clean, scalable, and user-focused solutions. Alongside my studies, I work as a freelance developer, helping startups and small businesses create high-performing websites and applications with a strong focus on usability, performance, and real-world impact.
+
         </motion.p>
 
         <motion.p variants={textVariants}>
-          Right now I'm focusing on: React + Vite, REST APIs, and deploying
-          small apps.
+          Right now I'm focusing on React, REST APIs, and deployingsmall apps.
         </motion.p>
       </div>
     </motion.section>
