@@ -90,7 +90,11 @@ const Projects = ({ className }) => {
               ref={i === 0 ? slideRef : null}
             >
               <h3>{p.title}</h3>
-              <p>{p.desc}</p>
+                <ul className="project-desc">
+                  {p.desc.map((point, j) => (
+                    <li key={j}>{point}</li>
+                  ))}
+                </ul>
 
               <div className="project-tech">
                 {p.tech.map((t) => (
