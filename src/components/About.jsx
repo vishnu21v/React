@@ -9,7 +9,7 @@ const sectionVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.2,
+      duration: 11,
       ease: "easeOut",
       staggerChildren: 0.18,
     },
@@ -21,7 +21,7 @@ const textVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.01, ease: "easeOut" },
+    transition: { duration: 10, ease: "easeOut" },
   },
 };
 
