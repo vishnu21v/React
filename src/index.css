@@ -172,6 +172,9 @@ body {
 
 /* SCROLL REVEAL — section is always visible, children animate */
 .section {
+  padding: 4rem 1rem 2rem;
+  margin-left: 5%;
+  margin-right: 5%;
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
