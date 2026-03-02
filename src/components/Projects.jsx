@@ -16,13 +16,25 @@ const projects = [
   },
   {
     title: "Clothing Review Recommender",
-    desc: "Discover clothing you'll love! This NLP-driven system analyzes user reviews, matches preferences with TF-IDF and cosine similarity, and serves recommendations via a Flask API. Responsive frontend for a smooth experience.",
+    desc: [
+      "Discover clothing you'll love with an NLP-driven recommendation system.",
+      "Analyzes user reviews to understand and match preferences accurately.",
+      "Uses TF-IDF and cosine similarity for intelligent item matching.",
+      "Serves personalized recommendations via a Flask API.",
+      "Features a responsive frontend for a smooth user experience."
+    ],
     tech: ["Python", "NLP", "Flask"],
     link: "#",
   },
   {
     title: "Pymon Game (OOP)",
-    desc: "A Python adventure game featuring CSV-powered data, interactive menus, and modular OOP design. Explore locations, manage your team, and enjoy a user-friendly interface built for easy expansion.",
+    desc: [
+      "A Python-based adventure game built with modular Object-Oriented Programming design.",
+      "Utilizes CSV-powered data for dynamic game content and easy data management.",
+      "Features interactive menus for an engaging and intuitive user experience.",
+      "Explore various locations and manage your team throughout the game.",
+      "Designed with a user-friendly interface built for easy expansion and future updates."
+    ],
     tech: ["Python", "OOP"],
     link: "#",
   },
@@ -106,7 +118,7 @@ const Projects = ({ className }) => {
                 ))}
               </div>
 
-              <a href={p.link} className="project-link">
+              <a href={p.link} target="_blank" rel="noopener noreferrer" className="project-link">
                 View repo →
               </a>
             </article>
